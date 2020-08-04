@@ -1,10 +1,7 @@
 ##########
-# Tweaked Win10 Initial Setup Script
-# Primary Author: Disassembler <disassembler@dasm.cz>
-# Primary Author Source: https://github.com/Disassembler0/Win10-Initial-Setup-Script
-# Tweaked Source: https://gist.github.com/alirobe/7f3b34ad89a159e6daa1/
+# This scrip is based on Chris Titus one: https://github.com/ChrisTitusTech/win10script/tree/master
 #
-#    If you're a power user looking to tweak your machinea, or doing larger roll-out.. 
+#    If you're a power user looking to tweak your machine, or doing larger roll-out.. 
 #    Use the @Disassembler0 script instead. It'll probably be more up-to-date than mine:
 #    https://github.com/Disassembler0/Win10-Initial-Setup-Script
 # 
@@ -14,14 +11,14 @@
 #
 #     > powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JJ8R4')"
 #
-#	Chris Titus Additions:
+#	What does it do? 
 #
 #	- Dark Mode
 #	- One Command to launch and run
 #	- Chocolatey Install
 #	- O&O Shutup10 CFG and Run
-#	- Added Install Programs
-#	- Added Debloat Microsoft Store Apps
+#	- Install useful programs for a gamer and for everyday use
+#	- Debloat Microsoft Store Apps
 #
 ##########
 # Default preset
@@ -30,7 +27,7 @@ $tweaks = @(
 	"RequireAdmin",
 
 	### External Program Setup
-	"InstallTitusProgs", #REQUIRED FOR OTHER PROGRAM INSTALLS!
+	"InstallLukeProgs", #REQUIRED FOR OTHER PROGRAM INSTALLS!
 	"InstallAdobe",
 	"Install7Zip",
 	"InstallNotepadplusplus",
@@ -93,7 +90,7 @@ $tweaks = @(
 	"DisableDefragmentation",     # "EnableDefragmentation",
 	"DisableSuperfetch",          # "EnableSuperfetch",
 	"DisableIndexing",            # "EnableIndexing",
-	"SetBIOSTimeUTC",             # "SetBIOSTimeLocal",
+	"SetBIOSTimeLocal"            #"SetBIOSTimeUTC",
 	"DisableHibernation",		# "EnableHibernation",          # 
 	"EnableSleepButton",		# "DisableSleepButton",         
 	"DisableSleepTimeout",        # "EnableSleepTimeout",
@@ -167,7 +164,7 @@ $tweaks = @(
 	"AddPhotoViewerOpenWith",       # "RemovePhotoViewerOpenWith",
 	"InstallPDFPrinter",		# "UninstallPDFPrinter",
 	# "UninstallXPSPrinter",          # "InstallXPSPrinter",
-	# "RemoveFaxPrinter",             # "AddFaxPrinter",
+	"RemoveFaxPrinter",             # "AddFaxPrinter",
 
 	### Server Specific Tweaks ###
 	# "HideServerManagerOnLogin",   # "ShowServerManagerOnLogin",
@@ -187,10 +184,10 @@ $tweaks = @(
 )
 
 #########
-# Recommended Titus Programs
+# Recommended programs for a perfect user-gaming expirience 
 #########
 
-Function InstallTitusProgs {
+Function InstallLukeProgs {
 	Write-Output "Installing Chocolatey"
 	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 	choco install chocolatey-core.extension -y
@@ -200,10 +197,25 @@ Function InstallTitusProgs {
 	Start-BitsTransfer -Source "https://dl5.oo-software.com/files/ooshutup10/OOSU10.exe" -Destination OOSU10.exe
 	./OOSU10.exe ooshutup10.cfg /quiet
 }
-
+#Everyday applications
 Function InstallAdobe {
 	Write-Output "Installing Adobe Acrobat Reader"
 	choco install adobereader -y
+}
+
+Function InstallWhatsApp {
+	Write-Output "Installing WhatsApp Messanger"
+	choco install whatsapp -y
+}
+
+Function InstallTelegram {
+	Write-Output "Installing Telegram Desktop"
+	choco install telegram -y
+}
+
+Function InstallDiscord {
+	Write-Output "Installing Telegram Discord"
+	choco install discord -y
 }
 
 Function InstallJava {
@@ -226,11 +238,95 @@ Function InstallMediaPlayerClassic {
 	choco install mpc-hc -y
 }
 
+Function InstallFirefox {
+	Write-Output "Installing Firefox"
+	choco install firefox -y
+}
+
+Function InstallChrome {
+	Write-Output "Installing Chrome"
+	choco install googlechrome -y
+}
+
+Function InstallSpotify {
+	Write-Output "Installing Spotify"
+	choco install spotify -y
+}
+
+Function InstallAutoHotkey {
+	Write-Output "Installing AutoHotkey"
+	choco install autohotkey.install -y
+}
+
+#just for legal uses, like downloading linux distros via torrent
+Function InstallqBittorent {
+	Write-Output "Installing qBittorent"
+	choco install qbittorrent -y
+}
+
+Function InstallRufus {
+	Write-Output "Installing Rufus"
+	choco install rufus -y
+}
+
+#Gaming Applications
+Function InstallEpicGamesLauncher {
+	Write-Output "Installing Epic Games Launcher"
+	choco install epicgameslauncher -y
+}
+
+Function InstallOrigin {
+	Write-Output "Installing Origin"
+	choco install origin -y
+}
+
+Function InstallSteam {
+	Write-Output "Installing Steam"
+	choco install steam -y
+}
+
+Function InstallUplay {
+	Write-Output "Installing Uplay"
+	choco install uplay -y
+}
+
+#Testing Applications
+Function InstallCinebench {
+	Write-Output "Installing Cinebench"
+	choco install uplay -y
+}
+
+Function InstallOCCT {
+	Write-Output "Installing OCCT"
+	choco install occt -y
+}
+
+Function InstallAIDA64 {
+	Write-Output "Installing AIDA64"
+	choco install aida64-extreme -y
+}
+
+Function InstallHWiNFO {
+	Write-Output "Installing HWiNFO"
+	choco install hwinfo -y
+}
+
+Function InstallAfterBurner {
+	Write-Output "Installing AfterBurner"
+	choco install msiafterburner -y
+}
+
+Function InstallCPUZ {
+	Write-Output "Installing CPUZ"
+	choco install cpu-z.install -y
+}
+
 ##########
 # Privacy Tweaks
 ##########
 
 # Disable Telemetry
+
 # Note: This tweak may cause Enterprise edition to stop receiving Windows updates.
 # Windows Update control panel will then show message "Your device is at risk because it's out of date and missing important security and quality updates. Let's get you back on track so Windows can run more securely. Select this button to get going".
 # In such case, enable telemetry, run Windows update and then disable telemetry again. See also https://github.com/Disassembler0/Win10-Initial-Setup-Script/issues/57
