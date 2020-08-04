@@ -1,30 +1,55 @@
-# win10script
-This is the Ultimate Windows 10 Script from a creation from multiple debloat scripts and gists from github. I also added Chocolatey and other tools to the script that I install on every machine.
+# Win10-gaming-debloat-scrip
+An all in one script to optimize windows after a fresh install.
 
-## My Additions
+This project could not exist without the great work of Chris Titus (and others), go check his work: https://github.com/ChrisTitusTech/win10script/tree/master
 
-- Dark Mode
-- One Command to launch and run
-- Chocolatey Install
-- O&O Shutup10 CFG and Run
-- Added Install Programs
-- Added Debloat Microsoft Store Apps
+NOTE: This tweak may cause Enterprise edition to stop receiving Windows updates.
+Windows Update control panel will then show message "Your device is at risk because it's out of date and missing important security and quality updates. Let's get you back on track so Windows can run more securely. Select this button to get going".
+In such case, enable telemetry, run Windows update and then disable telemetry again. See also https://github.com/Disassembler0/Win10-Initial-Setup-Script/issues/57
 
-## Modifications
-I encourage people to fork this project and comment out things they don't like! Here is a list of normal things people change:
-- Uninstalling OneDrive (This is on in my script)
-- Installing Adobe, Chocolatey, Notepad++, MPC-HC, and 7-Zip
 
-Comment any thing you don't want out... Example:
+## What does it do?
 
-```
-########## NOTE THE # SIGNS! These disable lines This example shows UACLow being set and Disabling SMB1
-### Security Tweaks ###
-	"SetUACLow",                  # "SetUACHigh",
-	"DisableSMB1",                # "EnableSMB1",
+The script will remove every microsoft invasive programs and telemetry, reinstalling the important ones, but debloated. After running the script you will also find dark mode enabled (you can change it if you want). 
 
-########## NOW LETS SWAP THESE VALUES AND ENABLE SMB1 and Set UAC to HIGH
-### Security Tweaks ###
-	"SetUACHigh",
-	"EnableSMB1",
-```
+It will also install Chocolatey, a package manager. Through this package manager it will install every programs that you need for gaming and for everyday use.
+
+Everyday programs:
+
+*Acrobat Reader 
+*WhatasApp Messanger 
+*Telegram
+*Discord
+*Java
+*7zip
+*Notepad++
+*Media Player Classic (VLC Alternative)
+*Firefox
+*Chrome
+*qBittorrent
+*Rufus
+*Spotify
+
+Gaming programs:
+
+*EpicGames Launcher
+*Steam
+*Origin
+*uPlay
+
+Hardware testing programs:
+
+*OCCT
+*Cinebench
+*AIDA64
+*HWiNFO
+*Afterburner
+*CPU-Z
+
+## How to use it
+
+You just need to launch PowerShell as administrator and paste this:
+
+
+Restart your PC, and you are done. 
+
