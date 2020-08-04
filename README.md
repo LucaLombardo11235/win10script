@@ -17,7 +17,7 @@ It will also install Chocolatey, a package manager. Through this package manager
 
 **Common programs:**
 - Acrobat Reader 
-- WhatasApp Messanger 
+- WhatsApp Messanger 
 - Telegram
 - Discord
 - Java
