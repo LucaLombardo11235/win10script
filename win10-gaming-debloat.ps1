@@ -32,6 +32,7 @@ $tweaks = @(
 	"InstallWhatsApp",
 	"InstallTelegram",
 	"InstallDiscord",
+	"InstallAdobe",
 	"InstallJava",
 	"Install7Zip",
 	"InstallNotepadplusplus",
@@ -47,7 +48,11 @@ $tweaks = @(
 	"InstallUplay",
 	"InstallCinebench",
 	"InstallOCCT",
+	"InstallAIDA64",
+	"InstallHWiNFO",
 	"InstallAfterBurner",
+	"InstallCPUZ",
+	"InstallRufus",
 
 	### Windows Apps
 	"DebloatAll",
@@ -280,6 +285,10 @@ Function InstallqBittorent {
 	choco install qbittorrent -y
 }
 
+Function InstallRufus {
+	Write-Output "Installing Rufus"
+	choco install rufus -y
+}
 
 #Gaming Applications
 Function InstallEpicGamesLauncher {
@@ -333,10 +342,6 @@ Function InstallCPUZ {
 	choco install cpu-z.install -y
 }
 
-Function InstallRufus {
-	Write-Output "Installing Rufus"
-	choco install rufus -y
-}
 ##########
 # Privacy Tweaks
 ##########
