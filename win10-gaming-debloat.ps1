@@ -1,5 +1,5 @@
 ##########
-# This scrip is based on Chris Titus one: https://github.com/ChrisTitusTech/win10script/tree/master
+# This scrip is based on Chris one: https://github.com/ChrisTitusTech/win10script/tree/master
 #
 #    If you're a power user looking to tweak your machine, or doing larger roll-out.. 
 #    Use the @Disassembler0 script instead. It'll probably be more up-to-date than mine:
@@ -193,7 +193,7 @@ Function InstallLukeProgs {
 	choco install chocolatey-core.extension -y
 	Write-Output "Running O&O Shutup with Recommended Settings"
 	Import-Module BitsTransfer
-	Start-BitsTransfer -Source "https://raw.githubusercontent.com/ChrisTitusTech/win10script/master/ooshutup10.cfg" -Destination ooshutup10.cfg
+	Start-BitsTransfer -Source "https://raw.githubusercontent.com/LucaLombardo11235/win10script/master/ooshutup10.cfg" -Destination ooshutup10.cfg
 	Start-BitsTransfer -Source "https://dl5.oo-software.com/files/ooshutup10/OOSU10.exe" -Destination OOSU10.exe
 	./OOSU10.exe ooshutup10.cfg /quiet
 }
