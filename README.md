@@ -8,48 +8,49 @@ Windows Update control panel will then show message "Your device is at risk beca
 In such case, enable telemetry, run Windows update and then disable telemetry again. See also https://github.com/Disassembler0/Win10-Initial-Setup-Script/issues/57
 
 
+
 ## What does it do?
 
 The script will remove every microsoft invasive programs and telemetry, reinstalling the important ones, but debloated. After running the script you will also find dark mode enabled (you can change it if you want). 
 
 It will also install Chocolatey, a package manager. Through this package manager it will install every programs that you need for gaming and for everyday use.
 
-Everyday programs:
+**Common programs:**
+- Acrobat Reader 
+- WhatasApp Messanger 
+- Telegram
+- Discord
+- Java
+- 7zip
+- Notepad++
+- Media Player Classic (VLC Alternative)
+- Firefox
+- Chrome
+- qBittorrent
+- Rufus
+- Spotify.
 
-*Acrobat Reader 
-*WhatasApp Messanger 
-*Telegram
-*Discord
-*Java
-*7zip
-*Notepad++
-*Media Player Classic (VLC Alternative)
-*Firefox
-*Chrome
-*qBittorrent
-*Rufus
-*Spotify
+**Gaming programs:**
 
-Gaming programs:
+- EpicGames Launcher
+- Steam
+- Origin
+- uPlay
 
-*EpicGames Launcher
-*Steam
-*Origin
-*uPlay
+**Hardware testing programs:**
 
-Hardware testing programs:
+- OCCT
+- Cinebench
+- AIDA64
+- HWiNFO
+- Afterburner
+- CPU-Z
 
-*OCCT
-*Cinebench
-*AIDA64
-*HWiNFO
-*Afterburner
-*CPU-Z
 
 ## How to use it
 
 You just need to launch PowerShell as administrator and paste this:
 
+    powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JJoho')"
 
 Restart your PC, and you are done. 
-
