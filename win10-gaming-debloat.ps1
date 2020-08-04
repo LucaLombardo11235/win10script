@@ -29,9 +29,26 @@ $tweaks = @(
 	### External Program Setup
 	"InstallLukeProgs", #REQUIRED FOR OTHER PROGRAM INSTALLS!
 	"InstallAdobe",
+	"InstallWhatsApp",
+	"InstallTelegram",
+	"InstallDiscord",
+	"InstallAdobe",
+	"InstallJava",
 	"Install7Zip",
 	"InstallNotepadplusplus",
 	"InstallMediaPlayerClassic",
+	"InstallFirefox",
+	"InstallChrome",
+	"InstallSpotify",
+	"InstallAutoHotkey",
+	"InstallqBittorent",
+	"InstallEpicGamesLauncher",
+	"InstallOrigin",
+	"InstallSteam",
+	"InstallUplay",
+	"InstallCinebench",
+	"InstallOCCT",
+	"InstallAfterBurner",
 
 	### Windows Apps
 	"DebloatAll",
