@@ -314,7 +314,7 @@ Function InstallUplay {
 #Testing Applications
 Function InstallCinebench {
 	Write-Output "Installing Cinebench"
-	choco install uplay -y
+	choco install cinebench -y
 }
 
 Function InstallOCCT {
