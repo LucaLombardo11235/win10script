@@ -1,4 +1,4 @@
-# Win10-gaming-debloat-script
+# Win10 gaming debloat script
 An all in one script to optimize windows after a fresh install.
 
 This project could not exist without the great work of Chris Titus (and others), go check his work: https://github.com/ChrisTitusTech/win10script/tree/master
