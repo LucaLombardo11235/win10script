@@ -28,7 +28,6 @@ It will also install Chocolatey, a package manager. Through this package manager
 - Chrome
 - qBittorrent
 - Rufus
-- Spotify.
 
 **Gaming programs:**
 
