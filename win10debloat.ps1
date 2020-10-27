@@ -1,8 +1,7 @@
 ##########
 # Tweaked Win10 Initial Setup Script
-# Primary Author: Disassembler <disassembler@dasm.cz>
-# Primary Author Source: https://github.com/Disassembler0/Win10-Initial-Setup-Script
-# Tweaked Source: https://gist.github.com/alirobe/7f3b34ad89a159e6daa1/
+# Primary Author: Disassembler Chris Titus Tech
+# Primary Author Source: https://github.com/ChrisTitusTech/win10script
 #
 #    Note from author: Never run scripts without reading them & understanding what they do.
 #
@@ -10,17 +9,7 @@
 #
 #     > powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JJ8R4')"
 #
-#	Chris Titus Tech Additions:
-#
-#	- Dark Mode
-#	- One Command to launch and run
-#	- Chocolatey Install
-#	- O&O Shutup10 CFG and Run
-#	- Added Install Programs
-#	- Added Debloat Microsoft Store Apps
-#	- Added Confirm Menu for Adobe and Brave Browser
-#	- Changed Default Apps to Notepad++, Brave, Irfanview, and more using XML Import feature
-#
+
 ##########
 # Default preset
 $tweaks = @(
@@ -28,9 +17,9 @@ $tweaks = @(
 	"RequireAdmin",
 	"CreateRestorePoint",
 	
-	### Chris Titus Tech Additions
+	### Chris Luke Tech Additions
 	"TitusRegistryTweaks",
-	"InstallTitusProgs", #REQUIRED FOR OTHER PROGRAM INSTALLS!
+	"InstallLukeProgs", #REQUIRED FOR OTHER PROGRAM INSTALLS!
 	"Install7Zip",
 	"InstallNotepadplusplus",
 	"InstallIrfanview",
@@ -47,7 +36,7 @@ $tweaks = @(
 	"DisableWiFiSense",             # "EnableWiFiSense",
 	"DisableSmartScreen",         # "EnableSmartScreen",
 	"DisableWebSearch",             # "EnableWebSearch",
-	"DisableAppSuggestions",        # "EnableAppSuggestions",
+	"EnableAppSuggestions",
 	"DisableActivityHistory",       # "EnableActivityHistory",
 	"DisableBackgroundApps",        # "EnableBackgroundApps",
 	"DisableLocationTracking",      # "EnableLocationTracking",
@@ -55,7 +44,7 @@ $tweaks = @(
 	"DisableFeedback",              # "EnableFeedback",
 	"DisableTailoredExperiences",   # "EnableTailoredExperiences",
 	"DisableAdvertisingID",         # "EnableAdvertisingID",
-	"DisableCortana",               # "EnableCortana",
+	"EnableCortana",
 	"DisableErrorReporting",        # "EnableErrorReporting",
 	"SetP2PUpdateLocal",          # "SetP2PUpdateInternet",
 	"DisableDiagTrack",             # "EnableDiagTrack",
@@ -103,9 +92,9 @@ $tweaks = @(
 	# "DisableFastStartup",         # "EnableFastStartup",
 
 	### UI Tweaks ###
-	"DisableActionCenter",          # "EnableActionCenter",
-	"EnableLockScreen",				# "DisableLockScreen",
-	"EnableLockScreenRS1",			# "DisableLockScreenRS1",
+	"EnableActionCenter",
+	"EnableLockScreen",		# "DisableLockScreen",
+	"EnableLockScreenRS1",		# "DisableLockScreenRS1",
 	# "HideNetworkFromLockScreen",    # "ShowNetworkOnLockScreen",
 	# "HideShutdownFromLockScreen",   # "ShowShutdownOnLockScreen",
 	"DisableStickyKeys",            # "EnableStickyKeys",
@@ -113,7 +102,7 @@ $tweaks = @(
 	"ShowFileOperationsDetails",    # "HideFileOperationsDetails",
 	"DisableFileDeleteConfirm",	# "EnableFileDeleteConfirm",    
 	"HideTaskbarSearch",
-	#"ShowTaskbarSearchIcon",      # "ShowTaskbarSearchBox",
+	"ShowTaskbarSearchIcon",      #"ShowTaskbarSearchBox",
 	"HideTaskView",                 # "ShowTaskView",
 	# "ShowSmallTaskbarIcons",        # "ShowLargeTaskbarIcons",
 	# "SetTaskbarCombineWhenFull",    # "SetTaskbarCombineNever",     # "SetTaskbarCombineAlways",
@@ -136,25 +125,25 @@ $tweaks = @(
 	"SetExplorerThisPC",            # "SetExplorerQuickAccess",
 	"HideThisPCFromDesktop",	# "ShowThisPCOnDesktop",
 	# "ShowUserFolderOnDesktop",    # "HideUserFolderFromDesktop",
-	# "HideDesktopFromThisPC",        # "ShowDesktopInThisPC",
-	# "HideDesktopFromExplorer",    # "ShowDesktopInExplorer",
-	# "HideDocumentsFromThisPC",      # "ShowDocumentsInThisPC",
-	# "HideDocumentsFromExplorer",  # "ShowDocumentsInExplorer",
-	# "HideDownloadsFromThisPC",      # "ShowDownloadsInThisPC",
-	# "HideDownloadsFromExplorer",  # "ShowDownloadsInExplorer",
-	"HideMusicFromThisPC",          # "ShowMusicInThisPC",
-	"HideMusicFromExplorer",      # "ShowMusicInExplorer",
-	# "HidePicturesFromThisPC",       # "ShowPicturesInThisPC",
-	# "HidePicturesFromExplorer",   # "ShowPicturesInExplorer",
-	"HideVideosFromThisPC",         # "ShowVideosInThisPC",
+	"ShowDesktopInThisPC",
+	"ShowDesktopInExplorer",
+	"ShowDocumentsInThisPC",
+	"ShowDocumentsInExplorer",
+	"ShowDownloadsInThisPC",
+	"ShowDownloadsInExplorer",
+	"ShowMusicInThisPC",
+	"ShowMusicInExplorer",
+	"ShowPicturesInThisPC",
+	"ShowPicturesInExplorer",
+	"ShowVideosInThisPC",
 	"HideVideosFromExplorer",     # "ShowVideosInExplorer",
 	"Hide3DObjectsFromThisPC",      # "Show3DObjectsInThisPC",
 	"Hide3DObjectsFromExplorer",  # "Show3DObjectsInExplorer",
-	# "DisableThumbnails",          # "EnableThumbnails",
+	"EnableThumbnails",
 	# "DisableThumbsDB",              # "EnableThumbsDB",
 
 	### Application Tweaks ###
-    # "EnableOneDrive",
+        # "EnableOneDrive",
 	"UninstallMsftBloat",           # "InstallMsftBloat",
 	"UninstallThirdPartyBloat",     # "InstallThirdPartyBloat",
 	# "UninstallWindowsStore",      # "InstallWindowsStore",
@@ -187,7 +176,7 @@ $tweaks = @(
 )
 
 #########
-# Recommended Titus Customizations
+# Recommended Luke Customizations
 #########
 
 function Show-Choco-Menu {
@@ -234,7 +223,7 @@ Function TitusRegistryTweaks {
 	If (!(Get-ItemProperty $UpdatesPath  DeferQualityUpdatesPeriodInDays)) { New-ItemProperty -Path $UpdatesPath -Name "ActiveHoursStart" -Type DWord -Value 8 }
 	Set-ItemProperty -Path $UpdatesPath -Name "ActiveHoursStart" -Type DWord -Value 8
 }
-Function InstallTitusProgs {
+Function InstallLukeProgs {
 	Write-Output "Installing Chocolatey"
 	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 	choco install chocolatey-core.extension -y
@@ -285,6 +274,66 @@ Function InstallVLC {
 
 Function InstallIrfanview {
 	Show-Choco-Menu -Title "Do you want to install Irfanview?" -ChocoInstall "irfanview"
+}
+
+Function Firefox {
+	Show-Choco-Menu -Title "Do you want to install Firefox?" -ChocoInstall "firefox"
+}
+
+Function WhatsApp {
+	Show-Choco-Menu -Title "Do you want to install Whatsapp, asshole?" -ChocoInstall "whatsapp"
+}
+
+Function Telegram {
+	Show-Choco-Menu -Title "Do you want to install Telegram?" -ChocoInstall "telegram"
+}
+
+Function Discord {
+	Show-Choco-Menu -Title "Do you want to install Discord?" -ChocoInstall "discord"
+}
+
+Function Java 
+	Show-Choco-Menu -Title "Do you want to install Java?" -ChocoInstall "jre8"
+}
+
+Function Chrome 
+	Show-Choco-Menu -Title "Do you want to install Google Chrome?" -ChocoInstall "googlechrome"
+}
+
+Function Powertoys 
+	Show-Choco-Menu -Title "Do you want to install Powertoys?" -ChocoInstall "powertoys"
+}
+
+Function qBittorrent 
+	Show-Choco-Menu -Title "Do you want to install qBittorent?" -ChocoInstall "qbittorent"
+}
+
+Function Rufus 
+	Show-Choco-Menu -Title "Do you want to install Rufus?" -ChocoInstall "rufus"
+}
+
+Function Origin 
+	Show-Choco-Menu -Title "Do you want to install Origin?" -ChocoInstall "origin"
+}
+
+Function EpicGame 
+	Show-Choco-Menu -Title "Do you want to install Epic Games Launcher?" -ChocoInstall "epicgameslauncher"
+}
+
+Function Steam 
+	Show-Choco-Menu -Title "Do you want to install Steam?" -ChocoInstall "steam"
+}
+
+Function Uplay 
+	Show-Choco-Menu -Title "Do you want to install Uplay?" -ChocoInstall "uplay"
+}
+
+Function Cinebench 
+	Show-Choco-Menu -Title "Do you want to install Cinebench?" -ChocoInstall "cinebench"
+}
+
+Function HWinfo 
+	Show-Choco-Menu -Title "Do you want to install HWinfo?" -ChocoInstall "hwinfo"
 }
 
 Function ChangeDefaultApps {
