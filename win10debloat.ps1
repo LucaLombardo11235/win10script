@@ -26,6 +26,21 @@ $tweaks = @(
 	"InstallVLC",
 	"InstallAdobe",
 	"InstallBrave",
+	"InstallFirefox"
+	"InstallWhatsApp"
+	"InstallTelegram"
+	"InstallDiscord"
+	"InstallJava"
+	"InstallChrome"
+	"InstallPowertoys"
+	"InstallqBittorrent"
+	"InstallRufus"
+	"InstallOrigin"
+	"InstallEpicGame"
+	"InstallSteam"
+	"InstallUplay"
+	"InstallCinebench"
+	"InstallHWinfo"
 	"ChangeDefaultApps",
 
 	### Windows Apps
