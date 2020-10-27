@@ -49,3 +49,5 @@ You just need to launch PowerShell as administrator and paste this:
     powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JTP9g')"
 
 Restart your PC, and you are done. 
+
+NOTE: It is supposed to be runned on a fresh install of Windows 10. Just downloads and install updates and driver. When it's done you can run the script
