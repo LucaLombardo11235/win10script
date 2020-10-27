@@ -307,47 +307,47 @@ Function Discord {
 	Show-Choco-Menu -Title "Do you want to install Discord?" -ChocoInstall "discord"
 }
 
-Function Java 
+Function Java {
 	Show-Choco-Menu -Title "Do you want to install Java?" -ChocoInstall "jre8"
 }
 
-Function Chrome 
+Function Chrome {
 	Show-Choco-Menu -Title "Do you want to install Google Chrome?" -ChocoInstall "googlechrome"
 }
 
-Function Powertoys 
+Function Powertoys {
 	Show-Choco-Menu -Title "Do you want to install Powertoys?" -ChocoInstall "powertoys"
 }
 
-Function qBittorrent 
+Function qBittorrent {
 	Show-Choco-Menu -Title "Do you want to install qBittorent?" -ChocoInstall "qbittorent"
 }
 
-Function Rufus 
+Function Rufus {
 	Show-Choco-Menu -Title "Do you want to install Rufus?" -ChocoInstall "rufus"
 }
 
-Function Origin 
+Function Origin {
 	Show-Choco-Menu -Title "Do you want to install Origin?" -ChocoInstall "origin"
 }
 
-Function EpicGame 
+Function EpicGame {
 	Show-Choco-Menu -Title "Do you want to install Epic Games Launcher?" -ChocoInstall "epicgameslauncher"
 }
 
-Function Steam 
+Function Steam {
 	Show-Choco-Menu -Title "Do you want to install Steam?" -ChocoInstall "steam"
 }
 
-Function Uplay 
+Function Uplay {
 	Show-Choco-Menu -Title "Do you want to install Uplay?" -ChocoInstall "uplay"
 }
 
-Function Cinebench 
+Function Cinebench {
 	Show-Choco-Menu -Title "Do you want to install Cinebench?" -ChocoInstall "cinebench"
 }
 
-Function HWinfo 
+Function HWinfo {
 	Show-Choco-Menu -Title "Do you want to install HWinfo?" -ChocoInstall "hwinfo"
 }
 
