@@ -19,29 +19,14 @@ $tweaks = @(
 	
 	### Chris Luke Tech Additions
 	"TitusRegistryTweaks",
-	"InstallLukeProgs", #REQUIRED FOR OTHER PROGRAM INSTALLS!
+	"InstallTitusProgs", #REQUIRED FOR OTHER PROGRAM INSTALLS!
 	"Install7Zip",
 	"InstallNotepadplusplus",
 	"InstallIrfanview",
 	"InstallVLC",
 	"InstallAdobe",
 	"InstallBrave",
-	"InstallFirefox"
-	"InstallWhatsApp"
-	"InstallTelegram"
-	"InstallDiscord"
-	"InstallJava"
-	"InstallChrome"
-	"InstallPowertoys"
-	"InstallqBittorrent"
-	"InstallRufus"
-	"InstallOrigin"
-	"InstallEpicGame"
-	"InstallSteam"
-	"InstallUplay"
-	"InstallCinebench"
-	"InstallHWinfo"
-	"ChangeDefaultApps",
+	#"ChangeDefaultApps",
 
 	### Windows Apps
 	"DebloatAll",
@@ -238,7 +223,7 @@ Function TitusRegistryTweaks {
 	If (!(Get-ItemProperty $UpdatesPath  DeferQualityUpdatesPeriodInDays)) { New-ItemProperty -Path $UpdatesPath -Name "ActiveHoursStart" -Type DWord -Value 8 }
 	Set-ItemProperty -Path $UpdatesPath -Name "ActiveHoursStart" -Type DWord -Value 8
 }
-Function InstallLukeProgs {
+Function InstallTitusProgs {
 	Write-Output "Installing Chocolatey"
 	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 	choco install chocolatey-core.extension -y
@@ -289,66 +274,6 @@ Function InstallVLC {
 
 Function InstallIrfanview {
 	Show-Choco-Menu -Title "Do you want to install Irfanview?" -ChocoInstall "irfanview"
-}
-
-Function Firefox {
-	Show-Choco-Menu -Title "Do you want to install Firefox?" -ChocoInstall "firefox"
-}
-
-Function WhatsApp {
-	Show-Choco-Menu -Title "Do you want to install Whatsapp, asshole?" -ChocoInstall "whatsapp"
-}
-
-Function Telegram {
-	Show-Choco-Menu -Title "Do you want to install Telegram?" -ChocoInstall "telegram"
-}
-
-Function Discord {
-	Show-Choco-Menu -Title "Do you want to install Discord?" -ChocoInstall "discord"
-}
-
-Function Java {
-	Show-Choco-Menu -Title "Do you want to install Java?" -ChocoInstall "jre8"
-}
-
-Function Chrome {
-	Show-Choco-Menu -Title "Do you want to install Google Chrome?" -ChocoInstall "googlechrome"
-}
-
-Function Powertoys {
-	Show-Choco-Menu -Title "Do you want to install Powertoys?" -ChocoInstall "powertoys"
-}
-
-Function qBittorrent {
-	Show-Choco-Menu -Title "Do you want to install qBittorent?" -ChocoInstall "qbittorent"
-}
-
-Function Rufus {
-	Show-Choco-Menu -Title "Do you want to install Rufus?" -ChocoInstall "rufus"
-}
-
-Function Origin {
-	Show-Choco-Menu -Title "Do you want to install Origin?" -ChocoInstall "origin"
-}
-
-Function EpicGame {
-	Show-Choco-Menu -Title "Do you want to install Epic Games Launcher?" -ChocoInstall "epicgameslauncher"
-}
-
-Function Steam {
-	Show-Choco-Menu -Title "Do you want to install Steam?" -ChocoInstall "steam"
-}
-
-Function Uplay {
-	Show-Choco-Menu -Title "Do you want to install Uplay?" -ChocoInstall "uplay"
-}
-
-Function Cinebench {
-	Show-Choco-Menu -Title "Do you want to install Cinebench?" -ChocoInstall "cinebench"
-}
-
-Function HWinfo {
-	Show-Choco-Menu -Title "Do you want to install HWinfo?" -ChocoInstall "hwinfo"
 }
 
 Function ChangeDefaultApps {
