@@ -46,7 +46,7 @@ It will also install Chocolatey, a package manager. Through this package manager
 
 You just need to launch PowerShell as administrator and paste this:
 
-    powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JTP9g')"
+    powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JTHEM')"
 
 Restart your PC, and you are done. 
 
