@@ -1,3 +1,5 @@
+# OUTDATED, DO NOT USE IT 
+
 # Win10 debloat script 
 An all in one script to optimize windows after a fresh install.
 
